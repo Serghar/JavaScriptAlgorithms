@@ -17,7 +17,7 @@ function RBTree() {
 	this.root = null;
 }
 
-//After a normal insert of a new red node call the balace function
+//After a normal insert of a new red node call the balance function
 RBTree.prototype.insert = function(val) {
 	var node = new RBTreeNode(val);
 	if(!this.root){
@@ -98,7 +98,7 @@ RBTree.prototype.balance = function(curr) {
 				//move to grandparent
 				curr = uncle.parent;
 
-			//If Uncle node is black preform rotations
+			//If Uncle node is black perform rotations
 			} else {
 				var gparent = curr.parent.parent;
 				//If Uncle and Current are similar direction, move to parent and left rotate
@@ -127,7 +127,7 @@ RBTree.prototype.balance = function(curr) {
 				//move to grandparent
 				curr = uncle.parent;
 
-			//If Uncle node is black preform rotations
+			//If Uncle node is black perform rotations
 			} else {
 				var gparent = curr.parent.parent;
 				//If Uncle and Current are similar direction, move to parent and left rotate
